@@ -1,0 +1,9 @@
+package progSincro;
+
+public class Contador {
+	private int num;
+	
+	public Contador(int num) {
+		this.num = num;
+	}
+}

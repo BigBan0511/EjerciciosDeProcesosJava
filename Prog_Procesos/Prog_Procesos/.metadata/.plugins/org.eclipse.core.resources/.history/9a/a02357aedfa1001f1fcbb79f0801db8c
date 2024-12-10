@@ -1,0 +1,41 @@
+package progSincro;
+
+public class ejemplo1 {
+
+	public static void main(String[] args) {
+
+	}
+
+}
+
+class HiloA extends Thread{
+	private Contador contador;
+
+	public HiloA(String n, Contador c) {
+		setName(n);
+		contador = c;
+	}
+
+	public void run() {
+		for (int i = 0; i < 1000; i++) {
+			contador.incrementar();
+		}
+		System.out.println(getName() + " contador vale " + contador.getNum());
+	}
+}
+
+class HiloB extends Thread{
+	private Contador contador;
+
+	public HiloB(String n, Contador c) {
+		setName(n);
+		contador = c;
+	}
+
+	public void run() {
+		for (int i = 0; i < 1000; i++) {
+			contador.incrementar();
+		}
+		System.out.println(getName() + " contador vale " + contador.getNum());
+	}
+}

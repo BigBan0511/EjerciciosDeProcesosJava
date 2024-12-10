@@ -1,0 +1,57 @@
+package progSincro;
+
+public class ej1 {
+
+	public static void main(String[] args) {
+		Sala sala = new Sala();
+		
+		for (int x = 0; x < 30; x++) {
+			new Thread(() -> {
+				try {
+					if(sala.isTerminar()) {
+						System.out.println("terminar");
+					}else {
+						sala.entrar();
+						Thread.sleep(12000);
+					}
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			});
+		}
+	}
+
+}
+
+class Sala{
+	private int capacidad = 5;
+	private int contador = 0;
+	private int contInt = 0;
+	private int intentos = 3;
+	private boolean terminar = false;
+	private int tiempoSala = 10000;
+	private int salir = 1500;
+	
+	public synchronized void entrar() throws InterruptedException {
+		while(capacidad == contador) {
+			System.out.println("Sala llena");
+			if(contInt < intentos) {
+				wait();
+				contInt++;
+			}else {
+				terminar = true;
+			}
+		}
+		contador++;
+	}
+	
+	public synchronized void salir() {
+		while(contador == 0) {
+			System.out.println("no se puede salir");
+		}
+	}
+	
+	public boolean isTerminar() {
+		return terminar;
+	}
+}

@@ -1,0 +1,17 @@
+package progSincro;
+
+public class ejemplo1 {
+
+	public static void main(String[] args) {
+
+	}
+
+}
+
+class HiloA extends Thread{
+
+}
+
+class HiloB extends Thread{
+	
+}

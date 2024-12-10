@@ -1,0 +1,27 @@
+package progSincro;
+
+public class ejemplo3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class Buffer{
+	private int capacidad = 10;
+	private int contador = 0;
+	
+	public void producir() {
+		if(capacidad < 10) {
+			contador++;
+		}
+	}
+	
+	public void consumir() {
+		if(capacidad > 0) {
+			contador--;
+		}
+	}
+}

@@ -1,0 +1,14 @@
+package progSincro;
+
+public class ejemplo3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class Buffer{
+	private int capacidad = 10;
+}

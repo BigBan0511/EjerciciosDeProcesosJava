@@ -1,0 +1,22 @@
+package progSincro;
+
+public class ejemplo1 {
+
+	public static void main(String[] args) {
+
+	}
+
+}
+
+class HiloA extends Thread{
+	private Contador contador;
+	
+	public HiloA(String n, Contador c) {
+		setName(n);
+		contador = c;
+	}
+}
+
+class HiloB extends Thread{
+	
+}

@@ -1,0 +1,19 @@
+package progSincro;
+
+public class ejemplo5 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+
+
+class HiloConBandera implements Runnable{
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+}

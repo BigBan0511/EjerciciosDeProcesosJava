@@ -1,0 +1,25 @@
+package progSincro;
+
+public class ejemplo2 {
+
+	public static void main(String[] args) {
+		Contar contar = new Contar(0);
+	}
+
+}
+
+class Contar{
+	private int cuenta = 0;
+	
+	public Contar(int cuenta) {
+		this.cuenta = cuenta;
+	}
+	
+	public void incrementar() {
+		this.cuenta++;
+	}
+	
+	public int getCuenta() {
+		return cuenta;
+	}
+}

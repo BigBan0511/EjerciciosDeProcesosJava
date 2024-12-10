@@ -1,0 +1,20 @@
+package progSincro;
+
+public class ejemplo4 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+
+public class HiloInterrumpido implements Runnable{
+
+	@Override
+	public void run() {
+		while(!Thread.currentThread())
+		
+	}
+	
+}

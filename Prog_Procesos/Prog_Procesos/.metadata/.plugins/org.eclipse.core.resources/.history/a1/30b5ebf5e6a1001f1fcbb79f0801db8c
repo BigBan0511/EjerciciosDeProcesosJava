@@ -1,0 +1,16 @@
+package progSincro;
+
+public class ejemplo2 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+
+class Contar{
+	public Contar() {
+		// TODO Auto-generated constructor stub
+	}
+}

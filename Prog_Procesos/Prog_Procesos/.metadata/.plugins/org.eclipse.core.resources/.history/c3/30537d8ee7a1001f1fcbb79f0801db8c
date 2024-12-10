@@ -1,0 +1,34 @@
+package progSincro;
+
+public class ejemplo2 {
+
+	public static void main(String[] args) {
+		Contar contar = new Contar();
+		Thread[] hilos = new Thread[1000];
+		for (int x = 0; x < 1000; x++) {
+			hilos[x] = new Thread(new Runnable() {
+				
+				@Override
+				public void run() {
+					for (int i = 0; i < 1000; i++) {
+						contar.incrementar();
+					}
+				}
+			});
+			hilos[i].start();
+		}
+	}
+
+}
+
+class Contar{
+	private int cuenta = 0;
+	
+	public void incrementar() {
+		this.cuenta++;
+	}
+	
+	public int getCuenta() {
+		return cuenta;
+	}
+}
